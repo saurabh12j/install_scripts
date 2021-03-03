@@ -5,10 +5,10 @@ echo "Updating server..."
 sudo apt-get update 
 sudo apt-get upgrade
 echo "Updating Java..."
-sudo apt-get install default-jdk 
+sudo apt-get -qy install default-jdk 
 echo "Installing tomcat8..."
-sudo apt-get install tomcat8 
-sudo apt-get install tomcat8-docs tomcat8-examples tomcat8-admin
+sudo apt-get -qy install tomcat8 
+sudo apt-get install -qy tomcat8-docs tomcat8-examples tomcat8-admin
 #bash to admin-user in tomcat
 #----------------------------
 sed -i 's+</tomcat-users>+  <role rolename="admin-script"/>+gI' /var/lib/tomcat8/conf/tomcat-users.xml
